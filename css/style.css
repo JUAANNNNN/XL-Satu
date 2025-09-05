@@ -1,0 +1,25 @@
+/*
+ * File ini berisi style kustom yang tidak bisa
+ * atau sulit dilakukan dengan utility class Tailwind CSS.
+ * Contohnya adalah transisi untuk accordion.
+*/
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+/* Class 'active' akan ditambahkan oleh JavaScript */
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Sesuaikan jika jawaban lebih panjang */
+    padding-bottom: 1.25rem; /* Menambahkan padding saat terbuka */
+}
+
+.faq-item.active .chevron-icon {
+    transform: rotate(180deg);
+}
+
+.chevron-icon {
+    transition: transform 0.3s ease-in-out;
+}

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Resmi XL SATU - Internet Cepat & Stabil</title>
+    <meta name="description" content="Pemasangan internet rumah super cepat dari XL SATU Fiber. Dapatkan kuota HP bersama dan satu tagihan praktis. Hubungi sales resmi untuk pendaftaran.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Konfigurasi Kustom Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'xl-blue': '#1E3A8A', // Biru tua XL
+                        'xl-purple': '#4F46E5', // Ungu aksen
+                        'xl-teal': '#14B8A6', // Teal untuk tombol
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Style tambahan untuk transisi accordion */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* Sesuaikan jika jawaban lebih panjang */
+        }
+        .faq-item.active .chevron-icon {
+            transform: rotate(180deg);
+        }
+        .chevron-icon {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-inter bg-slate-50 text-gray-800">
+
+    <!-- ===== HEADER & HERO SECTION (Kode Anda, tidak diubah) ===== -->
+    <header class="bg-xl-blue text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <!-- Navigasi Desktop -->
+           <nav class="hidden md:flex justify-between items-center px-8 py-4 md:py-6">
+                <!-- Logo -->
+                <a href="#index.html" class="flex items-center">
+                    <img src="assets/Logo.png" alt="XL Satu class" 
+                         class="h-16 w-auto rounded-lg bg-xl-teal p-1 shadow-md">
+                </a>
+
+                <!-- Menu -->
+                <ul class="flex items-center space-x-10 text-lg md:text-xl font-medium">
+                    <li><a href="#paket" class="hover:text-xl-teal transition-colors">Paket</a></li>
+                    <li><a href="#coverage" class="hover:text-xl-teal transition-colors">Cakupan Area</a></li>
+                    <li><a href="#faq" class="hover:text-xl-teal transition-colors">FAQ</a></li>
+                </ul>
+
+                <!-- WhatsApp Button -->
+                <a href="https://api.whatsapp.com/send?phone=628161147484&text=Halo,%20saya%20tertarik%20dengan%20layanan%20XL%20SATU." 
+                target="_blank" 
+                class="bg-xl-teal text-white font-semibold py-3 px-6 rounded-full flex items-center space-x-2 hover:bg-teal-500 transition-all shadow-lg text-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                         class="bi bi-whatsapp" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg>
+                    <span>Hubungi via WhatsApp</span>
+                </a>
+            </nav>
+
+            <!-- Navigasi Mobile -->
+            <div class="md:hidden flex justify-between items-center">
+                 <a href="#index.html" class="flex items-center">
+                    <img src="assets/Logo.png" alt="XL Satu class" 
+                         class="h-16 w-auto rounded-lg bg-xl-teal p-1 shadow-md">
+                </a>
+                 <button id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                 </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+             <ul class="flex flex-col space-y-4 text-sm font-medium">
+                <li><a href="#paket" class="hover:text-xl-teal transition-colors">Paket</a></li>
+                <li><a href="#coverage" class="hover:text-xl-teal transition-colors">Cakupan Area</a></li>
+                <li><a href="#faq" class="hover:text-xl-teal transition-colors">FAQ</a></li>
+                <li>
+                    <a href="https://api.whatsapp.com/send?phone=628161147484&text=Halo,%20saya%20tertarik%20dengan%20layanan%20XL%20SATU." target="_blank" class="bg-xl-teal text-white font-semibold py-2 px-5 rounded-full inline-flex items-center space-x-2 hover:bg-teal-500 transition-all shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+                        <span>Hubungi via WhatsApp</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="container mx-auto px-6 pt-16 pb-24 text-center md:text-left">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">Internet Rumah Super Cepat + Kuota HP untuk Sekeluarga</h1>
+                    <p class="text-lg text-slate-300 mb-8">Satu tagihan, lebih praktis. Pasang sekarang seratus persen dibantu langsung oleh <span class="font-bold text-white">Indah Mutiara</span></p>
+                    <a href="#paket" class="bg-xl-teal text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-teal-500 transition-all shadow-xl">
+                        Lihat Pilihan Paket
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="assets/Keluarga.jpg" alt="Keluarga bahagia menggunakan internet XL SATU" class="rounded-lg w-full max-w-md mx-auto">
+                </div>
+            </div>
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
+                <a href="#why-xl">
+                    <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-- ===== WHY CHOOSE XL SECTION (Kode Anda, tidak diubah) ===== -->
+        <section id="why-xl" class="py-20 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Kenapa Pilih XL SATU?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <!-- Feature Card 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-transform">
+                        <div class="bg-xl-purple text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-rocket-takeoff-fill" viewBox="0 0 16 16"><path d="M12.17 9.53c2.307-2.592 3.278-4.465 3.641-6.218.21-.997.105-2.03-.234-2.952a3.453 3.453 0 0 0-1.527-1.527C13.04.575 12.007.47 11.01.68c-1.753.363-3.626 1.334-6.218 3.641a.563.563 0 0 0 .013.955c.185.087.388.133.595.133a.6.6 0 0 0 .424-.175L9.953 5.55l.07.07c.453.453.907.912 1.364 1.364l.07.07-3.64 3.64a.6.6 0 0 0-.175.424c0 .207.046.41.133.595a.563.563 0 0 0 .955.013Z"/><path d="M5.5 10.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5ZM5 12.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5Zm-1.5.5A.5.5 0 0 0 4 14h8a.5.5 0 0 0 0-1H4a.5.5 0 0 0-.5.5Z"/><path d="M4.5 15.5a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1h-6a.5.5 0 0 0-.5.5Zm-1.5.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 0-1h-9a.5.5 0 0 0-.5.5Z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Internet Tanpa Batas</h3>
+                        <p class="text-gray-600">Nikmati koneksi fiber optik super cepat dan stabil untuk semua kebutuhan digital Anda.</p>
+                    </div>
+                     <!-- Feature Card 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-transform">
+                        <div class="bg-xl-purple text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Kuota HP Bersama</h3>
+                        <p class="text-gray-600">Satu langganan, kuota HP bisa dibagikan untuk seluruh anggota keluarga. Lebih hemat!</p>
+                    </div>
+                     <!-- Feature Card 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-transform">
+                        <div class="bg-xl-purple text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-wallet-fill" viewBox="0 0 16 16"><path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v2h6a.5.5 0 0 1 .5.5c0 .253.08.644.306.958.207.288.557.542 1.194.542.637 0 .987-.254 1.194-.542.226-.314.306-.705.306-.958a.5.5 0 0 1 .5-.5h6v-2A1.5 1.5 0 0 0 14.5 2h-13z"/><path d="M16 6.5h-5.551a2.678 2.678 0 0 1-.443 1.042C9.613 8.088 8.963 8.5 8 8.5c-.963 0-1.613-.412-2.006-.958A2.679 2.679 0 0 1 5.551 6.5H0v6A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-6z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Satu Tagihan Praktis</h3>
+                        <p class="text-gray-600">Bayar internet rumah dan kuota HP keluarga dalam satu tagihan. Simpel dan tidak ribet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== START: BAGIAN YANG DI-UPGRADE ===== -->
+        <section id="paket" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Pilihan Paket Terlengkap</h2>
+                <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Pilih paket yang paling sesuai dengan kebutuhan Anda. Tersedia paket internet saja atau paket lengkap dengan hiburan TV kabel.</p>
+
+                <!-- Kategori Paket Internet Saja -->
+                <h3 class="text-2xl font-bold text-center mb-8 text-xl-blue">Paket Internet Saja</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    
+                    <!-- DAFTAR PAKET INTERNET SAJA -->
+                    <div class="border border-gray-200 p-6 rounded-xl shadow-md text-center flex flex-col">
+                        <h4 class="text-lg font-bold">XL SATU SPARK STARTER</h4>
+                        <p class="text-3xl font-extrabold my-2">20 <span class="text-lg font-medium">Mbps</span></p>
+                        <p class="text-2xl font-bold text-xl-blue mb-4">Rp 209.790<span class="text-base font-medium text-gray-500">/bln</span></p>
+                        <div class="border-t pt-4 text-gray-600 text-sm flex-grow"></div>
+                        <a href="https://api.whatsapp.com/send?phone=628161147484&text=Halo Indah, saya tertarik dengan Paket XL SATU SPARK STARTER." target="_blank" class="mt-6 inline-block bg-xl-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors w-full">Pilih Paket</a>
+                    </div>
+                    <div class="border border-gray-200 p-6 rounded-xl shadow-md text-center flex flex-col">
+                        <h4 class="text-lg font-bold">XL SATU SPARK VALUE</h4>
+                        <p class="text-3xl font-extrabold my-2">30 <span class="text-lg font-medium">Mbps</span></p>
+                        <p class="text-2xl font-bold text-xl-blue mb-4">Rp 254.190<span class="text-base font-medium text-gray-500">/bln</span></p>
+                        <div class="border-t pt-4 text-gray-600 text-sm flex-grow"></div>
+                        <a href="https://api.whatsapp.com/send?phone=628161147484&text=Halo Indah, saya tertarik dengan Paket XL SATU SPARK VALUE." target="_blank" class="mt-6 inline-block bg-xl-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors w-full">Pilih Paket</a>
+                    </div>
+                    <div class="border border-gray-200 p-6 rounded-xl shadow-md text-center flex flex-col">
+                        <h4 class="text-lg font-bold">XL SATU BASIC VALUE</h4>
+                        <p class="text-3xl font-extrabold my-2">30 <span class="text-lg font-medium">Mbps</span></p>
+                        <p class="text-2xl font-bold text-xl-blue mb-4">Rp 276.390<span class="text-base font-medium text-gray-500">/bln</span></p>
+                        <div class="border-t pt-4 text-gray-600 text-sm flex-grow space-y-1">
+                           <p>Kuota HP Bersama: 10 GB</p><p class="text-green-600 font-semibold">Up to 50 Mbps (6 bln)</p>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=628161147484&text=Halo Indah, saya tertarik dengan Paket XL SATU BASIC VALUE." target="_blank" class="mt-6 inline-block bg-xl-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors w-full">Pilih Paket</a>
+                    </div>
+                    <div class="border border-gray-200 p-6 rounded-xl shadow-md text-center flex flex-col">
+                        <h4 class="text-lg font-bold">XL SATU SPARK SMART</h4>
+                        <p class="text-3xl font-extrabold my-2">50 <span class="text-lg font-medium">Mbps</span></p>
+                        <p class="text-2xl font-bold text-xl-blue mb-4">Rp 271.950<span class="text-base font-medium text-gray-500">/bln</span></p>
+                         <div class="border-t pt-4 text-gray-600 text-sm flex-grow"></div>
+                        <a href="https://api.whatsapp.com/send?phone=628161147484&text=Halo Indah, saya tertarik dengan Paket XL SATU SPARK SMART." target="_blank" class="mt-6 inline-block bg-xl-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors w-full">Pilih Paket</a>
+                    </div>
+                    <div class="border-2 border-xl-purple p-6 rounded-xl shadow-2xl text-center relative flex flex-col">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-xl-purple text-white text-sm font-bold px-4 py-1 rounded-full">POPULER</div>
+                        <h4 class="text-lg font-bold">XL SATU BASIC SMART</h4>
+                        <p class="text-3xl font-extrabold my-2">50 <span class="text-lg font-medium">Mbps</span></p>
+                        <p class="text-2xl font-bold text-xl-blue mb-4">Rp 298.590<span class="text-base font-medium text-gray-500">/bln</span></p>
+                        <div class="border-t pt-4 text-gray-600 text-sm flex-grow space-y-1">
+                           <p>Kuota HP Bersama: 15 GB</p><p class="text-green-600 font-semibold">Up to 75 Mbps (6 bln)</p>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=628161147484&text=Halo Indah, saya tertarik dengan Paket XL SATU BASIC SMART." target="_blank" class="mt-6 inline-block bg-xl-teal text-white font-bold py-3 px-8 rounded-lg hover:bg-teal-600 transition-colors w-full">Pilih Paket</a>
+                    </div>
+                     <div class="border border-gray-200 p-6 rounded-xl shadow-md text-center flex flex-col">
+                        <h4 class="text-lg font-bold">XL SATU SPARK FAMILY</h4>
+                        <p class="text-3xl font-extrabold my-2">100 <span class="text-lg font-medium">Mbps</span></p>
+                        <p class="text-2xl font-bold text-xl-blue mb-4">Rp 354.090<span class="text-base font-medium text-gray-500">/bln</span></p>
+                        <div class="border-t pt-4 text-gray-600 text-sm flex-grow"></div>
+                        <a href="https://api.whatsapp.com/send?phone=628161147484&text=Halo Indah, saya tertarik dengan Paket XL SATU SPARK FAMILY." target="_blank" class="mt-6 inline-block bg-xl-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors w-full">Pilih Paket</a>
+                    </div>
+                    <div class="border border-gray-200 p-6 rounded-xl shadow-md text-center flex flex-col">
+                        <h4 class="text-lg font-bold">XL SATU SPARK SUPERUSER</h4>
+                        <p class="text-3xl font-extrabold my-2">150 <span class="text-lg font-medium">Mbps</span></p>
+                        <p class="text-2xl font-bold text-xl-blue mb-4">Rp 409.590<span class="text-base font-medium text-gray-500">/bln</span></p>
+                        <div class="border-t pt-4 text-gray-600 text-sm flex-grow"></div>
+                        <a href="https://api.whatsapp.com/send?phone=628161147484&text=Halo Indah, saya tertarik dengan Paket XL SATU SPARK SUPERUSER." target="_blank" class="mt-6 inline-block bg-xl-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors w-full">Pilih Paket</a>
+                    </div>
+                    <div class="border border-gray-200 p-6 rounded-xl shadow-md text-center flex flex-col">
+                        <h4 class="text-lg font-bold">XL SATU SPARK ULTIMATE</h4>
+                        <p class="text-3xl font-extrabold my-2">300 <span class="text-lg font-medium">Mbps</span></p>
+                        <p class="text-2xl font-bold text-xl-blue mb-4">Rp 444.000<span class="text-base font-medium text-gray-500">/bln</span></p>
+                        <div class="border-t pt-4 text-gray-600 text-sm flex-grow"></div>
+                        <a href="https://api.whatsapp.com/send?phone=628161147484&text=Halo Indah, saya tertarik dengan Paket XL SATU SPARK ULTIMATE." target="_blank" class="mt-6 inline-block bg-xl-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors w-full">Pilih Paket</a>
+                    </div>
+                    <div class="border border-gray-200 p-6 rounded-xl shadow-md text-center flex flex-col">
+                        <h4 class="text-lg font-bold">XL SATU SPARK ULTRA</h4>
+                        <p class="text-3xl font-extrabold my-2">600 <span class="text-lg font-medium">Mbps</span></p>
+                        <p class="text-2xl font-bold text-xl-blue mb-4">Rp 555.000<span class="text-base font-medium text-gray-500">/bln</span></p>
+                        <div class="border-t pt-4 text-gray-600 text-sm flex-grow"></div>
+                        <a href="https://api.whatsapp.com/send?phone=628161147484&text=Halo Indah, saya tertarik dengan Paket XL SATU SPARK ULTRA." target="_blank" class="mt-6 inline-block bg-xl-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors w-full">Pilih Paket</a>
+                    </div>
+                    <div class="border border-gray-200 p-6 rounded-xl shadow-md text-center flex flex-col">
+                        <h4 class="text-lg font-bold">XL SATU SPARK EXTREME</h4>
+                        <p class="text-3xl font-extrabold my-2">1 <span class="text-lg font-medium">Gbps</span></p>
+                        <p class="text-2xl font-bold text-xl-blue mb-4">Rp 999.000<span class="text-base font-medium text-gray-500">/bln</span></p>
+                        <div class="border-t pt-4 text-gray-600 text-sm flex-grow"></div>
+                        <a href="https://api.whatsapp.com/send?phone=628161147484&text=Halo Indah, saya tertarik dengan Paket XL SATU SPARK EXTREME." target="_blank" class="mt-6 inline-block bg-xl-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors w-full">Pilih Paket</a>
+                    </div>
+                </div>
+
+                <!-- Kategori Paket Internet + TV Kabel -->
+                <h3 class="text-2xl font-bold text-center mb-8 mt-16 text-xl-blue">Paket Internet + TV Kabel</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- DAFTAR PAKET INTERNET + TV -->
+                    <div class="border border-gray-200 p-6 rounded-xl shadow-md text-center flex flex-col">
+                        <h4 class="text-lg font-bold">XL SATU JOY VALUE</h4>
+                        <p class="text-3xl font-extrabold my-2">100 <span class="text-lg font-medium">Mbps</span></p>
+                        <p class="text-2xl font-bold text-xl-blue mb-4">Rp 388.500<span class="text-base font-medium text-gray-500">/bln</span></p>
+                        <div class="border-t pt-4 text-gray-600 text-sm flex-grow space-y-1">
+                           <p>Kuota HP Bersama: 25 GB</p><p>99 Channel TV</p>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=628161147484&text=Halo Indah, saya tertarik dengan Paket XL SATU JOY VALUE." target="_blank" class="mt-6 inline-block bg-xl-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors w-full">Pilih Paket</a>
+                    </div>
+                    <div class="border border-gray-200 p-6 rounded-xl shadow-md text-center flex flex-col">
+                        <h4 class="text-lg font-bold">XL SATU JOY PRO</h4>
+                        <p class="text-3xl font-extrabold my-2">150 <span class="text-lg font-medium">Mbps</span></p>
+                        <p class="text-2xl font-bold text-xl-blue mb-4">Rp 471.750<span class="text-base font-medium text-gray-500">/bln</span></p>
+                        <div class="border-t pt-4 text-gray-600 text-sm flex-grow space-y-1">
+                           <p>Kuota HP Bersama: 50 GB</p><p>99 Channel TV</p>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=628161147484&text=Halo Indah, saya tertarik dengan Paket XL SATU JOY PRO." target="_blank" class="mt-6 inline-block bg-xl-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors w-full">Pilih Paket</a>
+                    </div>
+                    <div class="border border-gray-200 p-6 rounded-xl shadow-md text-center flex flex-col">
+                        <h4 class="text-lg font-bold">XL SATU JOY PREMIUM</h4>
+                        <p class="text-3xl font-extrabold my-2">200 <span class="text-lg font-medium">Mbps</span></p>
+                        <p class="text-2xl font-bold text-xl-blue mb-4">Rp 749.250<span class="text-base font-medium text-gray-500">/bln</span></p>
+                        <div class="border-t pt-4 text-gray-600 text-sm flex-grow space-y-1">
+                           <p>Kuota HP Bersama: 50 GB</p><p>168 Channel TV</p>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=628161147484&text=Halo Indah, saya tertarik dengan Paket XL SATU JOY PREMIUM." target="_blank" class="mt-6 inline-block bg-xl-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors w-full">Pilih Paket</a>
+                    </div>
+                    <div class="border border-gray-200 p-6 rounded-xl shadow-md text-center flex flex-col">
+                        <h4 class="text-lg font-bold">XL SATU STAR VALUE</h4>
+                        <p class="text-3xl font-extrabold my-2">300 <span class="text-lg font-medium">Mbps</span></p>
+                        <p class="text-2xl font-bold text-xl-blue mb-4">Rp 1.093.350<span class="text-base font-medium text-gray-500">/bln</span></p>
+                        <div class="border-t pt-4 text-gray-600 text-sm flex-grow space-y-1">
+                           <p>Kuota HP Bersama: 100 GB</p><p>190 Channel TV</p>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=628161147484&text=Halo Indah, saya tertarik dengan Paket XL SATU STAR VALUE." target="_blank" class="mt-6 inline-block bg-xl-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors w-full">Pilih Paket</a>
+                    </div>
+                    <div class="border border-gray-200 p-6 rounded-xl shadow-md text-center flex flex-col">
+                        <h4 class="text-lg font-bold">XL SATU STAR PRO</h4>
+                        <p class="text-3xl font-extrabold my-2">500 <span class="text-lg font-medium">Mbps</span></p>
+                        <p class="text-2xl font-bold text-xl-blue mb-4">Rp 2.053.500<span class="text-base font-medium text-gray-500">/bln</span></p>
+                        <div class="border-t pt-4 text-gray-600 text-sm flex-grow space-y-1">
+                           <p>Kuota HP Bersama: 100 GB</p><p>192 Channel TV</p>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=628161147484&text=Halo Indah, saya tertarik dengan Paket XL SATU STAR PRO." target="_blank" class="mt-6 inline-block bg-xl-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors w-full">Pilih Paket</a>
+                    </div>
+                    <div class="border border-gray-200 p-6 rounded-xl shadow-md text-center flex flex-col">
+                        <h4 class="text-lg font-bold">XL SATU STAR PREMIUM</h4>
+                        <p class="text-3xl font-extrabold my-2">1 <span class="text-lg font-medium">Gbps</span></p>
+                        <p class="text-2xl font-bold text-xl-blue mb-4">Rp 4.995.000<span class="text-base font-medium text-gray-500">/bln</span></p>
+                        <div class="border-t pt-4 text-gray-600 text-sm flex-grow space-y-1">
+                           <p>Kuota HP Bersama: 100 GB</p><p>206 Channel TV</p>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=628161147484&text=Halo Indah, saya tertarik dengan Paket XL SATU STAR PREMIUM." target="_blank" class="mt-6 inline-block bg-xl-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors w-full">Pilih Paket</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== END: BAGIAN YANG DI-UPGRADE ===== -->
+
+
+        <!-- ===== COVERAGE & PROFILE SECTION (Kode Anda, tidak diubah) ===== -->
+        <section id="coverage" class="py-24" style="background-color: #f0f4ff;">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <!-- Cek Jangkauan -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl">
+                        <h2 class="text-3xl font-bold mb-3">Cek Jangkauan Area Anda</h2>
+                        <p class="text-gray-600 mb-6">Kirimkan alamat lengkap Anda, tim kami akan segera melakukan pengecekan.</p>
+                        
+                        <a href="https://api.whatsapp.com/send?phone=628161147484&text=Halo,%20saya%20mau%20cek%20coverage%20area%20XL%20SATU%20untuk%20alamat:" target="_blank" class="w-full text-center bg-xl-teal text-white font-bold py-4 px-8 rounded-lg flex items-center justify-center space-x-3 hover:bg-teal-600 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+                            <span>Cek Jangkauan via WhatsApp</span>
+                        </a>
+                    </div>
+                    <!-- Kenal Lebih Dekat & Testimoni -->
+                    <div class="space-y-8">
+                        <div class="bg-white p-8 rounded-2xl shadow-xl">
+                             <h3 class="text-2xl font-bold mb-4">Kenal Lebih Dekat</h3>
+                             <div class="flex items-center space-x-4">
+                                <img src="https://placehold.co/100x100/E0E7FF/4F46E5?text=Sales" alt="Foto [Nama Sales]" class="w-20 h-20 rounded-full">
+                                <div>
+                                    <h4 class="font-bold text-lg">Indah Mutiara</h4>
+                                    <p class="text-sm text-gray-500">Konsultan Resmi XL SATU</p>
+                                </div>
+                             </div>
+                             <p class="mt-4 text-gray-600">Saya siap bantu Anda dari konsultasi, pendaftaran, hingga pemasangan. Pelayanan cepat & ramah.</p>
+                        </div>
+                         <div class="bg-white p-8 rounded-2xl shadow-xl">
+                             <h3 class="text-2xl font-bold mb-4">Kata Mereka</h3>
+                             <div class="space-y-4">
+                                <!-- Testimoni 1 -->
+                                <div class="flex items-start space-x-3">
+                                    <img src="https://placehold.co/40x40/E0E7FF/4F46E5?text=A" alt="Foto Pelanggan 1" class="w-10 h-10 rounded-full mt-1">
+                                    <div class="bg-slate-100 p-3 rounded-lg">
+                                        <p class="text-gray-700 italic">"Pelayanannya cepat dan prosesnya mudah. Puas banget!"</p>
+                                        <p class="text-right text-sm font-semibold mt-1">- Bpk. Anton</p>
+                                    </div>
+                                </div>
+                                <!-- Testimoni 2 -->
+                                <div class="flex items-start space-x-3">
+                                    <img src="https://placehold.co/40x40/E0E7FF/4F46E5?text=R" alt="Foto Pelanggan 2" class="w-10 h-10 rounded-full mt-1">
+                                    <div class="bg-slate-100 p-3 rounded-lg">
+                                        <p class="text-gray-700 italic">"Sinyal di rumah auto ngebut. Recommended!"</p>
+                                         <p class="text-right text-sm font-semibold mt-1">- Ibu Rina</p>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROCESS & FAQ SECTION (Kode Anda, tidak diubah) ===== -->
+        <section id="faq" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                 <!-- Proses Pemasangan -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold mb-4">Proses Pemasangan Mudah</h2>
+                    <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-16 mt-8 text-center">
+                        <!-- Step 1 -->
+                        <div class="flex flex-col items-center">
+                            <div class="border-2 border-xl-purple text-xl-purple rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold">1</div>
+                            <h4 class="font-bold mt-4">Pilih & Daftar</h4>
+                            <p class="text-sm text-gray-500 max-w-xs">Konsultasi dan kirim data untuk pengecekan.</p>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="flex flex-col items-center">
+                             <div class="border-2 border-xl-purple text-xl-purple rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold">2</div>
+                            <h4 class="font-bold mt-4">Survey & Jadwal</h4>
+                             <p class="text-sm text-gray-500 max-w-xs">Pastikan jaringan tersedia dan tentukan jadwal teknisi.</p>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="flex flex-col items-center">
+                             <div class="border-2 border-xl-purple text-xl-purple rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold">3</div>
+                            <h4 class="font-bold mt-4">Pemasangan Aktif</h4>
+                             <p class="text-sm text-gray-500 max-w-xs">Teknisi datang sesuai jadwal dan internet langsung aktif.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ -->
+                <div class="max-w-3xl mx-auto">
+                    <h3 class="text-3xl font-bold text-center mb-8">Pertanyaan Umum (FAQ)</h3>
+                    <div class="space-y-4">
+                        <!-- FAQ Item 1 -->
+                        <div class="faq-item bg-slate-50 border border-slate-200 rounded-lg">
+                            <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold">
+                                <span>Apa saja syarat untuk berlangganan?</span>
+                                <svg class="chevron-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer px-5 pb-5 text-gray-600">
+                               <p>Cukup siapkan KTP dan alamat email yang aktif. Prosesnya akan saya bantu sepenuhnya, Anda tinggal duduk manis saja.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ Item 2 -->
+                        <div class="faq-item bg-slate-50 border border-slate-200 rounded-lg">
+                            <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold">
+                                <span>Berapa lama proses dari daftar sampai aktif?</span>
+                                <svg class="chevron-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer px-5 pb-5 text-gray-600">
+                               <p>Jika jaringan tersedia dan tidak ada kendala, normalnya proses pemasangan bisa dilakukan dalam 1-3 hari kerja setelah data Anda divalidasi.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ Item 3 -->
+                        <div class="faq-item bg-slate-50 border border-slate-200 rounded-lg">
+                            <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold">
+                                <span>Apakah ada biaya pemasangan awal?</span>
+                                <svg class="chevron-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer px-5 pb-5 text-gray-600">
+                               <p>Tergantung promo yang sedang berlaku. Saat ini, kami memiliki promo gratis biaya pemasangan. Hubungi saya untuk info promo terbaru!</p>
+                            </div>
+                        </div>
+                        <!-- FAQ Item 4 -->
+                        <div class="faq-item bg-slate-50 border border-slate-200 rounded-lg">
+                            <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold">
+                                <span>Bagaimana jika terjadi gangguan koneksi?</span>
+                                <svg class="chevron-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer px-5 pb-5 text-gray-600">
+                               <p>Anda bisa langsung menghubungi Call Center resmi XL di 820 atau melalui aplikasi myXL. Selain itu, Anda juga bisa menghubungi saya untuk bantuan eskalasi laporan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER (Kode Anda, tidak diubah) ===== -->
+    <footer class="bg-xl-blue text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold">XL SATU</h3>
+                    <p class="text-sm text-slate-300 mt-2">Sales Resmi: Indah Mutiara</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="font-semibold">Kontak Pendaftaran & Konsultasi:</p>
+                    <p class="text-xl-teal font-bold text-lg">0816-114-7484</p>
+                    <p class="text-sm text-slate-300">Hubungi via Telepon / WhatsApp</p>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-8 pt-6 text-center text-sm text-slate-400">
+                <p>&copy; 2024 Dibuat oleh Indah Mutiara. Website ini adalah milik pribadi sales dan bukan website resmi PT XL Axiata Tbk.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript untuk interaktivitas (Kode Anda, tidak diubah) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // --- FAQ Accordion ---
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Tutup semua item lain yang mungkin terbuka
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+
+                    // Buka atau tutup item yang diklik
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
